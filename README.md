@@ -31,6 +31,8 @@ Este projeto foi desenvolvido como trabalho final de um curso de JavaScript. As 
 
 ## 📋 Como Usar
 
+Você pode acessar a aplicação diretamente pelo GitHub Pages: [🔗Acesse aqui](https://veigagustavo.github.io/ListaTarefas/)
+
 1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/lista-tarefas.git
@@ -67,4 +69,4 @@ lista-tarefas/
 
 ## 👨‍💻 Autor
 
-[Seu Nome](https://github.com/seu-usuario) 
+[Gustavo Antunes](https://github.com/VeigaGustav0) 
