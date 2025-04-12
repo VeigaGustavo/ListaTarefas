@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div class="input-area">
+            <input id="new" type="text" placeholder="Digite uma nova tarefa">
+            <button onclick="obj.criarTarefa()">Adicionar</button>
+        </div>
+        
+        <div class="board">
+            <div class="column" id="div_fazer">
+                <h2>A Fazer</h2>
+                <div class="tarefas"></div>
+            </div>
+            <div class="column" id="div_fazendo">
+                <h2>Fazendo</h2>
+                <div class="tarefas"></div>
+            </div>
+            <div class="column" id="div_feito">
+                <h2>Feito</h2>
+                <div class="tarefas"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* Reset básico e configuração do box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base do body com gradiente de fundo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Gradiente suave de fundo */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal com largura máxima */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do título principal com efeito de sombra */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Sombra no texto para destaque */
+}
+
+/* Área de input com flexbox para alinhamento */
+.input-area {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo do input com transições e efeitos de foco */
+input[type="text"] {
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    width: 400px;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Efeito quando o input está em foco */
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52,152,219,0.2); /* Efeito de brilho ao focar */
+}
+
+/* Estilo dos botões com gradiente e efeitos de hover */
+button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); /* Gradiente no botão */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Efeito de elevação ao passar o mouse */
+button:hover {
+    transform: translateY(-2px); /* Move o botão para cima */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Aumenta a sombra */
+}
+
+/* Layout do board usando flexbox */
+.board {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo das colunas com efeitos de hover */
+.column {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de elevação ao passar o mouse na coluna */
+.column:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo dos títulos das colunas */
+.column h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Área de tarefas com borda tracejada */
+.tarefas {
+    min-height: 400px;
+    padding: 15px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Estilo das tarefas individuais */
+.tarefa {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: move;
+    position: relative;
+}
+
+/* Efeito de hover nas tarefas */
+.tarefa:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Estilo do texto da tarefa */
+.tarefa p {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+/* Estilo do botão de excluir com gradiente */
+.delete-btn {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+/* Efeito de escala no botão de excluir */
+.delete-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Efeitos visuais durante o arrastar da tarefa */
+.tarefa.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Efeito na coluna quando uma tarefa está sendo arrastada sobre ela */
+.tarefas.drag-over {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-color: #3498db;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .column {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 320px;
+    }
+}
